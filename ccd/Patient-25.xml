@@ -1440,6 +1440,14 @@ Medications section
 							<td>04-10-2010 10:00:00</td>
 							<td>Active</td>
 						</tr>
+						<tr>
+							<td>Look in machine readable portion!!</td>
+							<td>RxNorm</td>
+							<td>----</td>
+							<td><content ID="Medication3"/></td>
+							<td></td>
+							<td>Active</td>
+						</tr>
 				</tbody>
 			</table>					</text>
 					<informant>
@@ -1519,7 +1527,36 @@ Medications section
 								</consumable>
 							</substanceAdministration>
 						</entry>
-
+						<entry typeCode="DRIV">
+							<substanceAdministration classCode="SBADM" moodCode="EVN">
+								<!-- Medication activity template -->
+								<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+								<id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+								<text/>
+								<statusCode code="completed"/>
+								<effectiveTime xsi:type="IVL_TS">
+									<low value="20100608100000"/>
+									<high nullFlavor="UNK"/>
+								</effectiveTime>
+								<consumable>
+									<manufacturedProduct classCode="MANU">
+										<!-- Medication Information -->
+										<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+										<manufacturedMaterial>
+											<code code="314076" codeSystem="2.16.840.1.113883.6.88"
+												displayName="Lisinopril 10 MG Oral Tablet"
+												codeSystemName="RxNorm">
+												<originalText>
+													ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet
+													<reference value="#Medication3"/>
+												</originalText>
+											</code>
+											<name>ACE inhibitor or ARB</name>
+										</manufacturedMaterial>
+									</manufacturedProduct>
+								</consumable>
+							</substanceAdministration>
+						</entry>
 
 				</section>
 			</component>
@@ -1671,90 +1708,8 @@ Problems section
 							</tr>
 				</tbody>
 			</table>					</text>
-						<entry typeCode="DRIV">
-							<act classCode="ACT" moodCode="EVN">
-								<!-- Problem act template -->
-								<templateId root="2.16.840.1.113883.10.20.22.4.3"/>
-								<id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"/>
-								<code code="CONC" codeSystem="2.16.840.1.113883.5.6"
-									codeSystemName="HL7ActClass" displayName="Concern"/>
-								<statusCode code="active"/>
-								<effectiveTime>
-									<low value="20100116100000"/>
-								</effectiveTime>
-								<entryRelationship typeCode="SUBJ">
-									<!-- Problem observation template -->
-									<observation classCode="OBS" moodCode="EVN">
-										<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
-										<id root="9d3d416d-45ab-4da1-912f-4583e0632000"/>
-										<code code="282291009" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis"/>
-										<statusCode code="completed"/>
-										<effectiveTime>
-											<low value="20100116100000"/>
-										</effectiveTime>
-										<value xsi:type="CD" code="248986005" codeSystem="2.16.840.1.113883.6.96"
-											displayName="Estimated date of conception"
-											codeSystemName="SNOMED-CT">
-										</value>
-										<entryRelationship typeCode="REFR">
-											<observation classCode="OBS" moodCode="EVN">
-												<templateId root="2.16.840.1.113883.10.20.22.4.6"/>
-												<code xsi:type="CE" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
-												<text>
-		                            				<reference value="#Problem1"/> 
-		                            			</text>
-												<statusCode code="completed"/>
-												<value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName=" SNOMED-CT"/>
-											</observation>
-										</entryRelationship>
-									</observation>
-								</entryRelationship>
-							</act>
-						</entry>
-						<entry typeCode="DRIV">
-							<act classCode="ACT" moodCode="EVN">
-								<!-- Problem act template -->
-								<templateId root="2.16.840.1.113883.10.20.22.4.3"/>
-								<id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"/>
-								<code code="CONC" codeSystem="2.16.840.1.113883.5.6"
-									codeSystemName="HL7ActClass" displayName="Concern"/>
-								<statusCode code="active"/>
-								<effectiveTime>
-									<low value="20100331100000"/>
-								</effectiveTime>
-								<entryRelationship typeCode="SUBJ">
-									<!-- Problem observation template -->
-									<observation classCode="OBS" moodCode="EVN">
-										<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
-										<id root="9d3d416d-45ab-4da1-912f-4583e0632000"/>
-										<code code="282291009" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis"/>
-										<statusCode code="completed"/>
-										<effectiveTime>
-											<low value="20100331100000"/>
-										</effectiveTime>
-										<value xsi:type="CD" code="315903005" codeSystem="2.16.840.1.113883.6.96"
-											displayName="Pregnant state, incidental"
-											codeSystemName="SNOMED-CT">
-												<translation code="Z33.1" codeSystem="2.16.840.1.113883.6.90"
-													displayName="Pregnant state, incidental" codeSystemName="ICD-10-CM"/>
-												<translation code="V22.2" codeSystem="2.16.840.1.113883.6.103"
-													displayName="Pregnant state, incidental" codeSystemName="ICD-9-CM"/>
-										</value>
-										<entryRelationship typeCode="REFR">
-											<observation classCode="OBS" moodCode="EVN">
-												<templateId root="2.16.840.1.113883.10.20.22.4.6"/>
-												<code xsi:type="CE" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
-												<text>
-		                            				<reference value="#Problem2"/> 
-		                            			</text>
-												<statusCode code="completed"/>
-												<value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName=" SNOMED-CT"/>
-											</observation>
-										</entryRelationship>
-									</observation>
-								</entryRelationship>
-							</act>
-						</entry>
+
+
 						<entry typeCode="DRIV">
 							<act classCode="ACT" moodCode="EVN">
 								<!-- Problem act template -->
@@ -1870,50 +1825,6 @@ Problems section
 												<code xsi:type="CE" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
 												<text>
 		                            				<reference value="#Problem5"/> 
-		                            			</text>
-												<statusCode code="completed"/>
-												<value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName=" SNOMED-CT"/>
-											</observation>
-										</entryRelationship>
-									</observation>
-								</entryRelationship>
-							</act>
-						</entry>
-						<entry typeCode="DRIV">
-							<act classCode="ACT" moodCode="EVN">
-								<!-- Problem act template -->
-								<templateId root="2.16.840.1.113883.10.20.22.4.3"/>
-								<id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7"/>
-								<code code="CONC" codeSystem="2.16.840.1.113883.5.6"
-									codeSystemName="HL7ActClass" displayName="Concern"/>
-								<statusCode code="active"/>
-								<effectiveTime>
-									<low value="20100428100000"/>
-								</effectiveTime>
-								<entryRelationship typeCode="SUBJ">
-									<!-- Problem observation template -->
-									<observation classCode="OBS" moodCode="EVN">
-										<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
-										<id root="9d3d416d-45ab-4da1-912f-4583e0632000"/>
-										<code code="282291009" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis"/>
-										<statusCode code="completed"/>
-										<effectiveTime>
-											<low value="20100428100000"/>
-										</effectiveTime>
-										<value xsi:type="CD" code="59621000" codeSystem="2.16.840.1.113883.6.96"
-											displayName="Essential hypertension"
-											codeSystemName="SNOMED-CT">
-												<translation code="I10" codeSystem="2.16.840.1.113883.6.90"
-													displayName="Essential (primary) hypertension" codeSystemName="ICD-10-CM"/>
-												<translation code="401.9" codeSystem="2.16.840.1.113883.6.103"
-													displayName="Unspecified essential hypertension" codeSystemName="ICD-9-CM"/>
-										</value>
-										<entryRelationship typeCode="REFR">
-											<observation classCode="OBS" moodCode="EVN">
-												<templateId root="2.16.840.1.113883.10.20.22.4.6"/>
-												<code xsi:type="CE" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
-												<text>
-		                            				<reference value="#Problem6"/> 
 		                            			</text>
 												<statusCode code="completed"/>
 												<value xsi:type="CD" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName=" SNOMED-CT"/>
