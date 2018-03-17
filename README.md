@@ -8,4 +8,12 @@ Samples in this resporitory are completely fictional and any resemblence to a re
 
 Note that this isn't really "big data" but if you can do it programmatically for 100 patients, you're on your way to big data :) 
 
+# Note on node_modules
+
+We've placed a windows copy of the node_modules needed for this assignment into the repository. If you can use this, great. If you still have trouble with parser, try the following command
+
+`npm install blue-button`
+
+If that fails, contact me or your facilitator
+
 Contact: jdamore@bu.edu
