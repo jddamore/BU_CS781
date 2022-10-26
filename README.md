@@ -1,19 +1,17 @@
 # BU_CS781 Big Data Assignment 
 
-A repository for an assignment as part of Boston University's CS 781 (Advanced Health Informatics) for analyzing clinical documents using an open-source parser. 
+A repository for an assignment as part of Boston University's CS 781 (Advanced Health Informatics) for analyzing patient data encoded in FHIR.  
 
-Note the BlueButtonJS parser (https://www.npmjs.com/package/blue-button) is recommended for the assignment, although other parsers (or languages!) are welcome. 
+Samples in this resporitory are completely fictional and any resemblence to a real patient is coincidental. We utilized a modified sample subset (n = 100) from [MITRE's Synthea work](https://synthea.mitre.org/). Use them at your risk and we provide no guarantee or warranty that they are accurate for fit for any use beyond this coursework! 
 
-Samples in this resporitory are completely fictional and any resemblence to a real patient is coincidental. We've brought over a subset of samples from a public repostiory (https://github.com/chb/sample_ccdas). We didn't create them, so don't contact us regarding. Use them at your risk and we provide no guarantee or warranty that they are good for anything! 
+The FHIR samples are stored as JSON and should be comformant to [FHIR R4](https://hl7.org/fhir/R4/). They are located as in "/samples" folder as 1 file per patient using the Bundle resource. 
 
 Note that this isn't really "big data" but if you can do it programmatically for 100 patients, you're on your way to big data :) 
 
-# Note on node_modules
+# Assignment Notes
 
-We've placed a windows copy of the node_modules needed for this assignment into the repository. If you can use this, great. If you still have trouble with parser, try the following command
+Students are welcome to perform the assignment using any programming language they choose, however, some pointers/suggestions are provided in this repository using JavaScript since the FHIR samples are natively stored as JSON. 
 
-`npm install blue-button`
-
-If that fails, contact me or your facilitator
+Please see learn.bu.edu and CS781 for assignment details. 
 
 Contact: jdamore@bu.edu
