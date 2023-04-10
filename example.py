@@ -8,3 +8,7 @@ for x in files:
     data = json.load(file)
     id = data["entry"][0]["resource"]["id"]
     print(id)
+    for y in data["entry"]:
+      resource = y["resource"]
+      if resource["resourceType"] == "Condition":
+        print("found a problem!")
